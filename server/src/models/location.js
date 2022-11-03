@@ -30,8 +30,8 @@ function validateLocation(location) {
   return schema.validate(location);
 }
 
-// let location = new Location({ name: 'Sample' });
-// location.save();
+let location = new Location({ name: 'Sample' });
+location.save();
 
 exports.locationSchema = locationSchema;
 exports.Location = Location;

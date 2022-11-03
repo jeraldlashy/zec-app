@@ -17,7 +17,7 @@ const app = express();
 
 require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/ZecBasePlay')
+mongoose.connect('mongodb+srv://lashie:lashie@zecbase.r64ux45.mongodb.net/?retryWrites=true&w=majority')
     .then(() => console.log('Connected…'))
     .catch(err => console.error('Connection failed…'));
 
