@@ -23,7 +23,7 @@ router.get('/', auth,  async(req, res) => {
         total += issue.numberOfReports;
     });
 
-    const topIssuePercentage = (topIssue.numberOfReports / total) * 100;
+    const topIssuePercentage = ((topIssue.numberOfReports / total) * 100).toFixed(2);
 
 
     // total reports
@@ -41,7 +41,7 @@ router.get('/', auth,  async(req, res) => {
 
 
         //total loaction
-        const totalLocationPercentage = (topLocation.numberOfIssues / total) * 100;
+        const totalLocationPercentage = ((topLocation.numberOfIssues / total) * 100).toFixed(2);
 
 
     res.render('index', {
