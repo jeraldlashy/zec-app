@@ -34,11 +34,11 @@ function validateIssue(issue) {
 }
 
 
-const issue = new Issue({
-  title: "Sample"
-});
+// const issue = new Issue({
+//   title: "Sample"
+// });
 
-issue.save();
+// issue.save();
 
 exports.Issue = Issue;
 exports.validate = validateIssue;
