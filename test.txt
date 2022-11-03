@@ -1,0 +1,8 @@
+Category    id 635523ae2781aad7f8f6509f
+User    id 635527612781aad7f8f650ae
+Issue       id 635523ae2781aad7f8f6509f
+Reporting   id
+
+another issue ID, 6355a2a68271213068b7162b
+another Category, 6355a3288271213068b71630
+''      user,     63559b6068c1054486f9a451

@@ -1,0 +1,52 @@
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Add a report</h4>
+        <p class="card-description"> Post your report here </p>
+        <form class="forms-sample" method="post" action="/reportings">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+          </div>
+
+          <div class="form-group">
+            <label for="Description">Description</label>
+            <textarea class="form-control" id="description"  name="description" rows="4"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="selectIssue">Issue</label>
+            <select class="form-control" id="selectIssue" name="issueTitle">
+            <% issues.map((issue)=>{ %>
+                <option><%= issue.title %> </option>
+            <% }) %>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="selectLocation">Issue</label>
+            <select class="form-control" id="selectLocation" name="locationName">
+                <% locations.map((location)=> { %>
+                    <option><%= location.name %> </option>
+                <% }) %>
+            </select>
+          </div>
+
+          <!-- <div class="form-group">
+            <label>File upload</label>
+            <input type="file" name="img[]" class="file-upload-default">
+            <div class="input-group col-xs-12">
+              <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+              <span class="input-group-append">
+                <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
+              </span>
+            </div>
+          </div> -->
+
+          <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+
+          <button class="btn btn-light">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>

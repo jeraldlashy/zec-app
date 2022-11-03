@@ -1,0 +1,44 @@
+<%- include('partials/head') %>
+  <div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Listing of Locations</h4>
+          <p class="card-description">
+          </p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th> Name </th>
+                <th> Number Of Reports </th>
+              </tr>
+
+            </thead>
+            <tbody>
+              <% locations.map((location)=> { %>
+                <tr
+                <% if(location.numberOfIssues > 5){%>
+                  class="table-danger"
+                <% } else if (location.numberOfIssues >= 3) { %>
+                  class="table-warning"
+                <% } else  { %>
+                class="table-info"
+                <% } %>
+                >
+                  <td>
+                    <%= location.name %>
+                  </td>
+                  <td>
+                    <%= location.numberOfIssues %>
+                  </td>
+                </tr>
+                <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <%- include ('forms/location') %>
+  </div>
+  <%- include('partials/tail') %>

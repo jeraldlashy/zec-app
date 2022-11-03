@@ -1,0 +1,44 @@
+<%- include('partials/head') %>
+
+  <div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">List of Issues</h4>
+          <p class="card-description"> List of all issues recorded and their reports
+          </p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th> Title </th>
+                <th> Number Of Reports </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% issues.map((issue)=> { %>
+                <tr
+                <% if(issue.numberOfReports > 7){%>
+                  class="table-danger"
+                <% } else if (issue.numberOfReports >= 3) { %>
+                  class="table-warning"
+                <% } else  { %>
+                class="table-info"
+                <% } %>
+                 >
+                  <td>
+                    <%= issue.title %>
+                  </td>
+                  <td>
+                    <%= issue.numberOfReports %>
+                  </td>
+                </tr>
+                <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <%- include('forms/issue') %>
+  </div>
+
+  <%- include('partials/tail') %>

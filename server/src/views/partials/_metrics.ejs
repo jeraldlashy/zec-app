@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-4 stretch-card grid-margin">
+      <div class="card bg-gradient-danger card-img-holder text-white">
+        <div class="card-body">
+          <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+          <h3 class="font-weight-normal mb-3">Critical Location <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+          </h3>
+
+          <h4 class="font-weight-normal mb-3"> <%= topLocation.name %>  </h4>
+
+          <h3 class="mb-5"><%= topLocation.numberOfIssues %>  Total Reports</h3>
+          <h4 class="mb-6"><%= totalLocationPercentage %> % </h3>
+          <h6 class="card-text">Location with Highest Recorded Issues</h6>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 stretch-card grid-margin">
+      <div class="card bg-gradient-danger card-img-holder text-white">
+        <div class="card-body">
+          <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+          <h3 class="font-weight-normal mb-3">Critical Issue : <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+          </h3>
+          <h4 class="font-weight-normal mb-3"><%= topIssue.title %> </h4>
+          <h2 class="mb-5"><%= topIssue.numberOfReports %> Total Reports</h2>
+          <h3 class="card-text"><%= topIssuePercentage %> %</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 stretch-card grid-margin">
+      <div class="card bg-gradient-success card-img-holder text-white">
+        <div class="card-body">
+          <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+          <h4 class="font-weight-normal mb-3">Total Reports <i class="mdi mdi-diamond mdi-24px float-right"></i>
+          </h4>
+          <h2 class="mb-5"><%= totalReports  %>  Reported Issues </h2>
+          <h6 class="card-text">All reported Issues from consituencies</h6>
+        </div>
+      </div>
+    </div>
+  </div>
